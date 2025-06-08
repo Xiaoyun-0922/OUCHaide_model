@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 设置参数
-IMG_SIZE = (224, 224)  # 图像尺寸
+IMG_SIZE = (224, 224)  
 BATCH_SIZE = 32
 EPOCHS = 20
-NUM_CLASSES = 4  # 假设有4种伤口类型：擦伤、割伤、烧伤、溃疡
+NUM_CLASSES = 4 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # 自定义数据集类
@@ -163,7 +163,7 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs):
 # 主函数
 def main():
     # 加载数据集
-    data_dir = 'path_to_wound_dataset'  # 替换为你的数据集路径
+    data_dir = '' 
     train_dataset, val_dataset = load_datasets(data_dir)
     
     # 创建数据加载器
